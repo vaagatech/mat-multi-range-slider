@@ -11,17 +11,17 @@ mat-slider {
   padding-right: 0;
 }
 
-$range-intersection-color: mat-color($mat-green, 400);
+$range-intersection-color: #66bb6a;
 @if variable-exists(range-silder-color) {
   $range-intersection-color: $range-silder-color;
 }
 
-$range-outer-color: mat-color($mat-grey, 400);
+$range-outer-color: #bdbdbd;
 @if variable-exists(range-outside-color) {
   $range-outer-color: $range-outside-color;
 }
 
-app-range-slider {
+ngx-mat-range-slider {
   height: 60px;
 
   .mat-slider-thumb-label {

@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation} from '@angular/core';
-import {MatSliderChange} from "@angular/material/slider";
-import {ThemePalette} from "@angular/material/core";
+import {MatSliderChange} from '@angular/material/slider';
+import {ThemePalette} from '@angular/material/core';
 
 export interface RangeType {
   min: number;
@@ -8,9 +8,9 @@ export interface RangeType {
 }
 
 @Component({
-  selector: 'ngx-mat-range-slider',
+  selector: 'lib-ngx-mat-range-slider',
   templateUrl: './ngx-mat-range-slider.component.html',
-  styleUrls: ['./range-slider.component.scss'],
+  styleUrls: ['./ngx-mat-range-slider.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
 export class NgxMatRangeSliderComponent implements OnInit {
@@ -21,29 +21,28 @@ export class NgxMatRangeSliderComponent implements OnInit {
   @Input() maxValue: number;
   @Input() minColor: ThemePalette = 'accent';
   @Input() maxColor: ThemePalette = 'primary';
-  @Input() showRuler: boolean = false;
+  @Input() showRuler = false;
   @Output() output = new EventEmitter<RangeType>();
 
-  _max: number = 75;
+  maxConf = 75;
 
-  get max() {
-    return this._max;
+  get max(): number {
+    return this.maxConf;
   }
 
   @Input()
-  set max(m) {
-    this._max = parseInt(m.toString());
+  set max(m: number) {
+    this.maxConf = parseInt(m.toString(), 10);
   }
 
-  _min: number = 18;
-
-  get min() {
-    return this._min;
-  }
+  minConf = 18;
 
   @Input()
-  set min(m) {
-    this._min = parseInt(m.toString());
+  set min(m: number) {
+    this.minConf = parseInt(m.toString(), 10);
+  }
+  get min(): number {
+    return this.minConf;
   }
 
   @Input()
@@ -52,7 +51,7 @@ export class NgxMatRangeSliderComponent implements OnInit {
     this.maxValue = v.max;
   }
 
-  get rulerArray() {
+  get rulerArray(): number[] {
     return [...Array(this.max - this.min).keys()].map(i => i + this.min);
   }
 
@@ -70,18 +69,18 @@ export class NgxMatRangeSliderComponent implements OnInit {
     this.output.emit({min: this.minValue, max: this.maxValue});
   }
 
-  valueChange(a: MatSliderChange) {
+  valueChange(): void {
     this.output.emit({min: this.minValue, max: this.maxValue});
   }
 
-  minValueInput(a: MatSliderChange) {
+  minValueInput(a: MatSliderChange): void {
     this.isMinValueInit = (a.value === this.min);
     if (a.value >= this.maxValue) {
       a.source.value = this.maxValue;
     }
   }
 
-  maxValueInput(a: MatSliderChange) {
+  maxValueInput(a: MatSliderChange): void {
     this.isMaxValueInit = (a.value === this.max);
     if (a.value <= this.minValue) {
       a.source.value = this.minValue;
