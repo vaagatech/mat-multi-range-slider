@@ -22,17 +22,19 @@ export class NgxMatRangeSliderComponent implements OnInit {
   @Input() minColor: ThemePalette = 'accent';
   @Input() maxColor: ThemePalette = 'primary';
   @Input() showRuler = false;
+
+  @Input() formatLabel = (v) => v;
+
   @Output() output = new EventEmitter<RangeType>();
 
   maxConf = 75;
 
-  get max(): number {
-    return this.maxConf;
-  }
-
   @Input()
   set max(m: number) {
     this.maxConf = parseInt(m.toString(), 10);
+  }
+  get max(): number {
+    return this.maxConf;
   }
 
   minConf = 18;
@@ -54,8 +56,6 @@ export class NgxMatRangeSliderComponent implements OnInit {
   get rulerArray(): number[] {
     return [...Array(this.max - this.min).keys()].map(i => i + this.min);
   }
-
-  @Input() formatLabel = (v) => v;
 
   ngOnInit(): void {
     if (!this.minValue) {

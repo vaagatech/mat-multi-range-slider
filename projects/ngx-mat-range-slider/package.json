@@ -10,5 +10,17 @@
   },
   "dependencies": {
     "tslib": "^2.0.0"
-  }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vaagatech/mat-multi-range-slider.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vaagatech/mat-multi-range-slider/issues"
+  },
+  "homepage": "https://github.com/vaagatech/mat-multi-range-slider#readme"
 }
