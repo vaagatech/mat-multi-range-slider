@@ -1,0 +1,14 @@
+{
+  "name": "ngx-mat-range-slider",
+  "author": "Vaaga technologies",
+  "version": "0.1.0",
+  "peerDependencies": {
+    "@angular/common": "^10.0.6",
+    "@angular/core": "^10.0.6"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0",
+    "@angular/cdk": "^10.1.0",
+    "@angular/material": "^10.1.0"
+  }
+}
