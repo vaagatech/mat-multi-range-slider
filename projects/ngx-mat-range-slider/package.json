@@ -1,7 +1,7 @@
 {
   "name": "ngx-mat-range-slider",
   "author": "Vaaga technologies",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "peerDependencies": {
     "@angular/common": "^10.0.6",
     "@angular/core": "^10.0.6",
@@ -22,5 +22,6 @@
   "bugs": {
     "url": "https://github.com/vaagatech/mat-multi-range-slider/issues"
   },
-  "homepage": "https://github.com/vaagatech/mat-multi-range-slider#readme"
+  "homepage": "https://github.com/vaagatech/mat-multi-range-slider#readme",
+  "keywords": ["slider", "range", "material", "angular", "multi range", "vaagatech", "vaaga"]
 }

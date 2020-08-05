@@ -2,14 +2,16 @@
 
 This is Angular Component to select range using Material Sliders. This component uses Angular material components.
 
-### Options:
-minColor: Material Color ThemePalette. default: accent 
-maxColor: Material Color ThemePalette. default: primary
-min: Minimum value for the Slider
-max: Maximum value for the Slider
-value: Initial value
-formatLabel: Function or Lambda to format the values on the selector.
+![Multi Range Slider](slider.jpg)
 
-output: Emits RangeType. RangeType = {min: number, max: number}
+### Options:
+* **minColor**: Material Color ThemePalette. default: accent 
+* **maxColor**: Material Color ThemePalette. default: primary
+* **min**: Minimum value for the Slider
+* **max**: Maximum value for the Slider
+* **value**: Initial value
+* **formatLabel**: Function or Lambda to format the values on the selector.
+
+* **output**: Emits RangeType. RangeType = {min: number, max: number}
 
 
