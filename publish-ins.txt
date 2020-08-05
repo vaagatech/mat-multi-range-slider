@@ -1,0 +1,6 @@
+
+ng build ngx-mat-range-slider --prod
+ng test ngx-mat-range-slider
+ng lint ngx-mat-range-slider
+npm adduser
+npm publish

@@ -10,7 +10,7 @@ This is Angular Component to select range using Material Sliders. This component
 * **min**: Minimum value for the Slider
 * **max**: Maximum value for the Slider
 * **value**: Initial value
-* **formatLabel**: Function or Lambda to format the values on the selector.
+* **formatLabel**: Function or Lamda to format the values on the selector.
 
 * **output**: Emits RangeType. RangeType = {min: number, max: number}
 
